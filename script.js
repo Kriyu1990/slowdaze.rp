@@ -197,22 +197,65 @@ async function loadPublicData() {
   }
 }
 
-$('year').textContent = new Date().getFullYear();
 
-const menuToggle = $('menuToggle');
-const mainNav = $('mainNav');
+document.addEventListener('DOMContentLoaded', () => {
+  // ปีที่แสดงใน footer
+  const year = document.getElementById('year');
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-menuToggle.addEventListener('click', () => {
-  const open = menuToggle.getAttribute('aria-expanded') !== 'true';
-  menuToggle.setAttribute('aria-expanded', String(open));
-  mainNav.classList.toggle('is-open', open);
-});
+  // ใช้ ID ให้ตรงกับ index.html จริง
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
 
-mainNav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
+  if (menuBtn && nav) {
+    menuBtn.setAttribute('aria-expanded', 'false');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // ปิดเมนูเมื่อเลือกหน้า
+    nav.querySelectorAll('[data-page]').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // สลับหน้าตาม data-page และ ID ของ section
+  function showPage(pageName) {
+    const target = document.getElementById(pageName);
+    if (!target || !target.classList.contains('page')) return;
+
+    document.querySelectorAll('main .page').forEach(page => {
+      page.classList.toggle('active', page === target);
+    });
+
+    if (pageName === 'home') {
+      history.replaceState(null, '', location.pathname + location.search);
+    } else {
+      history.replaceState(null, '', '#' + pageName);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  document.querySelectorAll('[data-page]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      showPage(link.dataset.page);
+    });
   });
-});
 
-loadPublicData();
+  // เปิดหน้าที่ระบุใน URL ได้
+  const initialPage = location.hash.slice(1);
+  if (initialPage && document.getElementById(initialPage)?.classList.contains('page')) {
+    showPage(initialPage);
+  } else {
+    showPage('home');
+  }
+});
