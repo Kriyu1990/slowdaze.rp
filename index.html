@@ -1,22 +1,85 @@
+
 <!doctype html>
 <html lang="th">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07040b">
+  <meta name="theme-color" content="#080609">
+  <meta name="description" content="slowdaze.rp — Photographer. บริการถ่ายภาพและรวมผลงาน">
   <title>slowdaze.rp | Photographer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main style="min-height:100vh;display:grid;place-items:center;text-align:center;padding:24px">
-    <div>
-      <p style="font-size:clamp(36px,8vw,64px);font-weight:700;margin:0">
-        slowdaze.rp
-      </p>
-      <p style="letter-spacing:5px">PHOTOGRAPHER</p>
-      <p>เว็บไซต์กำลังอยู่ระหว่างการปรับปรุง</p>
-    </div>
+  <header class="site-header">
+    <a class="brand" href="#home">slowdaze<span>.rp</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">หน้าแรก</a>
+      <a href="#portfolio">ผลงาน</a>
+      <a href="#services">บริการ</a>
+      <a href="#contact">ติดต่อ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">PHOTOGRAPHY · THAILAND</p>
+        <h1>slowdaze<span>.rp</span></h1>
+        <p class="hero-subtitle">PHOTOGRAPHER</p>
+        <p class="hero-description">
+          บันทึกช่วงเวลาสำคัญ ผ่านมุมมองและเรื่องราวในแบบของคุณ
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#portfolio">ชมผลงาน</a>
+          <a class="btn btn-outline" href="#contact">ติดต่อช่างภาพ</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-hidden="true">SD<span>.</span></div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORKS</p>
+        <h2>ผลงานของเรา<span>.</span></h2>
+        <p>รวมภาพถ่ายจากผลงานที่ผ่านมา</p>
+      </div>
+      <div id="portfolioStatus" class="status-message" role="status">
+        กำลังโหลดผลงาน...
+      </div>
+      <div id="portfolioGrid" class="portfolio-grid"></div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>บริการถ่ายภาพ<span>.</span></h2>
+        <p>เลือกประเภทงานที่ตรงกับความต้องการของคุณ</p>
+      </div>
+      <div id="serviceStatus" class="status-message" role="status">
+        กำลังโหลดบริการ...
+      </div>
+      <div id="serviceGrid" class="service-grid"></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>มาคุยเรื่องภาพถ่ายกัน<span>.</span></h2>
+        <p>สอบถามรายละเอียดและราคาได้ผ่านช่องทางด้านล่าง</p>
+      </div>
+      <div id="contactLinks" class="contact-links">
+        <p>กำลังโหลดช่องทางติดต่อ...</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home">slowdaze<span>.rp</span></a>
+    <p>PHOTOGRAPHER</p>
+    <p>© <span id="year"></span> slowdaze.rp</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
