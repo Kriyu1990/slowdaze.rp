@@ -1,4 +1,3 @@
-
 const API_URL = 'https://script.google.com/macros/s/AKfycbz-xM0ggbs882SpPIP7CchkUiWC78Mk9X7v1j5fLQd2HLbmiUqgMYrkPwOV37lsmbh04Q/exec';
 
 function publicApi(action, params = {}) {
