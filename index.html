@@ -1,85 +1,25 @@
-
-<!doctype html>
-<html lang="th">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080609">
-  <meta name="description" content="slowdaze.rp — Photographer. บริการถ่ายภาพและรวมผลงาน">
-  <title>slowdaze.rp | Photographer</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#home">slowdaze<span>.rp</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
-    <nav id="mainNav">
-      <a href="#home">หน้าแรก</a>
-      <a href="#portfolio">ผลงาน</a>
-      <a href="#services">บริการ</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">PHOTOGRAPHY · THAILAND</p>
-        <h1>slowdaze<span>.rp</span></h1>
-        <p class="hero-subtitle">PHOTOGRAPHER</p>
-        <p class="hero-description">
-          บันทึกช่วงเวลาสำคัญ ผ่านมุมมองและเรื่องราวในแบบของคุณ
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#portfolio">ชมผลงาน</a>
-          <a class="btn btn-outline" href="#contact">ติดต่อช่างภาพ</a>
-        </div>
-      </div>
-      <div class="hero-mark" aria-hidden="true">SD<span>.</span></div>
-    </section>
-
-    <section class="section" id="portfolio">
-      <div class="section-heading">
-        <p class="eyebrow">SELECTED WORKS</p>
-        <h2>ผลงานของเรา<span>.</span></h2>
-        <p>รวมภาพถ่ายจากผลงานที่ผ่านมา</p>
-      </div>
-      <div id="portfolioStatus" class="status-message" role="status">
-        กำลังโหลดผลงาน...
-      </div>
-      <div id="portfolioGrid" class="portfolio-grid"></div>
-    </section>
-
-    <section class="section services-section" id="services">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>บริการถ่ายภาพ<span>.</span></h2>
-        <p>เลือกประเภทงานที่ตรงกับความต้องการของคุณ</p>
-      </div>
-      <div id="serviceStatus" class="status-message" role="status">
-        กำลังโหลดบริการ...
-      </div>
-      <div id="serviceGrid" class="service-grid"></div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">LET'S CONNECT</p>
-        <h2>มาคุยเรื่องภาพถ่ายกัน<span>.</span></h2>
-        <p>สอบถามรายละเอียดและราคาได้ผ่านช่องทางด้านล่าง</p>
-      </div>
-      <div id="contactLinks" class="contact-links">
-        <p>กำลังโหลดช่องทางติดต่อ...</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <a class="brand" href="#home">slowdaze<span>.rp</span></a>
-    <p>PHOTOGRAPHER</p>
-    <p>© <span id="year"></span> slowdaze.rp</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="th"><head><meta charset="utf-8"><title>slowdaze.rp</title><link rel="stylesheet" href="styles.css"></head><body>
+<header><a class="logo" href="#home" data-page="home"><span class="logo-mark">sd.</span><span>slowdaze.rp<small>PHOTOGRAPHER</small></span></a><button id="menuBtn" aria-label="เปิดเมนู">☰</button><nav id="nav"><a data-page="home">หน้าแรก</a><a data-page="portfolio">ผลงาน</a><a data-page="booking">จองคิว</a><a data-page="schedule">ตารางคิว</a><a data-page="account">บัญชี / อัลบั้ม</a><a data-page="contact">ติดต่อ</a><a data-page="admin">แอดมิน</a></nav><span id="clock">--:--</span></header>
+<main>
+<section class="page active" id="home"><div class="hero"><div><p class="eyebrow">PHOTOGRAPHY · SLOW MOMENTS, KEPT FOREVER</p><h1>เก็บช่วงเวลาของคุณ<br><span>ในแบบที่เป็นคุณ</span></h1><p>ภาพถ่ายที่เล่าเรื่องราวของคุณ ด้วยความตั้งใจในทุกเฟรม</p><div class="actions"><button class="btn" data-page="booking">จองคิวถ่ายภาพ ↗</button><button class="btn ghost" data-page="portfolio">ดูผลงาน</button></div></div></div>
+<div class="section-head"><div><p class="eyebrow">PRICING</p><h2>ราคาเริ่มต้น</h2></div></div><div class="prices"><article><h3>เดี่ยว / คู่ / กลุ่ม / พอร์ต</h3><strong>800 <small>บาท/ชั่วโมง</small></strong></article><article><h3>งานอีเวนต์ / รับปริญญา</h3><strong>1,500 <small>บาท/งาน</small></strong></article><article><h3>งานแต่ง</h3><strong>2,500 <small>บาท/งาน</small></strong></article><article><h3>งานอื่น ๆ</h3><strong>สอบถามราคา</strong></article></div>
+<div class="section-head"><div><p class="eyebrow">NEXT 3 DAYS</p><h2>ตารางคิวว่าง</h2><p class="muted">เวลา 08:00–20:00 · แสดงสถานะรายชั่วโมง</p></div><button class="btn ghost" data-page="schedule">ดูตารางทั้งหมด</button></div><div id="homeAvailability" class="days-grid"><p class="muted">กำลังโหลดตารางคิว…</p></div>
+<div class="panel how"><h2>จองง่ายใน 4 ขั้นตอน</h2><div class="steps"><div><b>01</b><h3>เลือกคิว</h3><p>เลือกประเภทงาน วันที่ และเวลา</p></div><div><b>02</b><h3>กรอกข้อมูล</h3><p>ตั้ง Username และกรอกข้อมูลติดต่อ</p></div><div><b>03</b><h3>เก็บรหัส</h3><p>เก็บ Booking ID และ Token ID ไว้ตรวจสอบ</p></div><div><b>04</b><h3>รอยืนยัน</h3><p>ตรวจสถานะและแนบสลิปได้ภายหลัง</p></div></div></div></section>
+<section class="page" id="portfolio"><div class="page-title"><p class="eyebrow">SELECTED WORK</p><h1>ผลงาน</h1><p>เรื่องราวเล็ก ๆ ที่อยากเก็บไว้</p></div><div id="portfolioFilters" class="portfolio-filters" aria-label="เลือกหมวดผลงาน"></div><div id="portfolioGrid" class="portfolio-grid"><p class="muted">กำลังโหลดผลงาน…</p></div></section>
+<section class="page" id="booking"><div class="page-title"><p class="eyebrow">BOOK A SESSION</p><h1>จองคิวถ่ายภาพ</h1><p>ไม่ต้องสมัครสมาชิก จองได้เลยด้วย Username</p></div><div><form id="bookingForm" class="panel form"><div class="form-grid">
+<label>Username (ภาษาอังกฤษ) *<input id="username" required minlength="3" maxlength="30" pattern="[A-Za-z0-9_.-]{3,30}" autocomplete="username"><small id="usernameMsg" class="hint">3–30 ตัวอักษร a-z, 0-9, . _ -</small></label><label>รหัสผ่าน *<input id="password" type="password" required minlength="6" autocomplete="current-password"><small class="hint">จองครั้งแรก: ตั้งรหัสผ่านเอง 6 ตัวขึ้นไป · จองครั้งต่อไป: ใช้ Username และรหัสผ่านเดิม</small></label>
+<label>ประเภทงาน *<select id="type" required><option value="">เลือกประเภทงาน</option></select></label><label id="otherWrap" class="hidden">รายละเอียดงานอื่น ๆ<input id="otherType"></label>
+<label>จังหวัด *<select id="province" required><option value="">เลือกจังหวัด</option></select></label><label>อำเภอ/เขต *<input id="district" required></label><label>วันที่ *<input id="date" type="date" required></label><label>เวลาเริ่ม *<select id="start" required></select></label><label>เวลาสิ้นสุด *<select id="end" required></select></label><label>ระยะเวลา <output id="duration">เลือกเวลา</output></label>
+<label>ชื่อผู้จอง *<input id="name" required></label><label>เบอร์โทรศัพท์ *<input id="phone" required type="tel"></label><label>อีเมล<input id="email" type="email"></label><label class="wide">ที่อยู่/สถานที่ถ่าย<input id="address"></label><label class="wide">ลิงก์ Google Maps<input id="maps" type="url"></label><label class="wide">รายละเอียดเพิ่มเติม<textarea id="notes" rows="3"></textarea></label></div>
+<p id="busyText" class="hint"></p><fieldset><legend>วิธีชำระเงิน</legend><label class="radio"><input type="radio" name="payment" value="onsite" checked> ชำระหน้างาน</label><label class="radio"><input type="radio" name="payment" value="online"> โอนออนไลน์และแนบสลิป</label></fieldset><button class="btn" type="submit">ส่งคำขอจองคิว ↗</button><p id="bookingMsg" class="hint"></p></form>
+</div></section>
+<section class="page" id="schedule"><div class="page-title"><p class="eyebrow">AVAILABILITY</p><h1>ตารางคิว</h1><p class="legend"><span><i class="dot free"></i>ว่าง</span><span><i class="dot pend"></i>รอยืนยัน</span><span><i class="dot booked"></i>จองแล้ว</span></p></div><div class="panel"><label>เลือกวันที่ <input type="date" id="scheduleDate"></label><button id="refresh" class="btn ghost">รีเฟรช</button><div id="scheduleGrid" class="slots"></div></div></section>
+<section class="page" id="account"><div class="page-title"><p class="eyebrow">MY ACCOUNT</p><h1>บัญชี / อัลบั้ม</h1><p>ต้องจองอย่างน้อย 1 ครั้งเพื่อยืนยันตัวตน จากนั้นดูและจัดการการจองได้ที่นี่</p></div>
+<div class="panel narrow" id="accLogin"><h2>ลงทะเบียนข้อมูลลูกค้า</h2><form id="albumLogin" class="form"><label>กรอกชื่อของคุณ (ต้องเป็นชื่อเดียวกันกับจองครั้งแรก)<input id="albumUsername" required autocomplete="username"></label><label>กรอกรหัสผ่าน (ต้องเป็นรหัสเดียวกันกับจองครั้งแรก)<input id="albumPassword" type="password" required autocomplete="current-password"></label><button class="btn">บันทึก</button><p id="albumMsg" class="hint">ข้อมูลนี้จะถูกเก็บในเครื่องของคุณ เพื่อใช้ในการจองครั้งต่อไป</p></form></div>
+<div id="accArea" class="hidden"><div class="section-head"><h2><i class="dot free"></i>สวัสดี <span id="accName"></span></h2><button id="accOut" class="btn ghost" type="button">ออกจากระบบ</button></div>
+<div class="panel"><h2>การจองปัจจุบัน</h2><div id="accCurrent"></div></div><div class="panel"><h2>ประวัติการจอง</h2><div id="accHistory"></div></div><div class="panel"><h2>อัลบั้มส่วนตัว</h2><div id="accAlbums"></div></div></div></section>
+<section class="page" id="contact"><div class="page-title"><p class="eyebrow">SAY HELLO</p><h1>ติดต่อ</h1><p>ติดตามผลงานหรือสอบถามคิวได้ทางช่องทางด้านล่าง</p></div><div class="socials"><a target="_blank" rel="noopener" href="https://www.instagram.com/slowdaze.rp">Instagram ร้าน · @slowdaze.rp ↗</a><a target="_blank" rel="noopener" href="https://www.instagram.com/qdilnstz._">Instagram ส่วนตัว · @qdilnstz._ ↗</a><a target="_blank" rel="noopener" href="https://www.facebook.com/share/1Hm2H9gBeV/">Facebook · Idilfitree WM ↗</a><a id="lineLink" target="_blank" rel="noopener" href="#">LINE ติดต่อ ↗</a></div></section>
+<section class="page" id="admin"><div class="page-title"><p class="eyebrow">ADMIN ONLY</p><h1>หลังบ้าน</h1><p>เข้าสู่ระบบเพื่อจัดการคิว อัลบั้ม และผลงาน</p></div><div class="panel narrow" id="adminLoginBox"><form id="adminLogin" class="form"><label>Admin username<input id="adminUser" required></label><label>Password<input id="adminPass" type="password" required></label><button class="btn">เข้าสู่ระบบแอดมิน</button><p id="adminMsg" class="hint"></p></form></div><div id="adminArea"></div></section>
+</main><footer><span>© <span id="year"></span> slowdaze.rp</span><span>Photographer · Thailand</span><button id="adminShortcut" class="text-btn">เมนูแอดมิน</button></footer>
+<div id="slipModal" class="modal hidden"><div class="modalbox"><button class="x" id="closeSlip">×</button><h2>แนบสลิป</h2><div id="qr"></div><input type="file" id="slipFile" accept="image/png,image/jpeg,image/webp"><button class="btn" id="uploadSlip">ส่งสลิป</button><p id="slipMsg" class="hint"></p></div></div><div id="toast"></div>
+<script src="script.js"></script></body></html>
